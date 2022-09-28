@@ -20,7 +20,9 @@ public class Spawneador : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)){ 
-            GameObject nuevo = Instantiate(prefab_a_Clonar,gameObject.transform
+            GameObject nuevo = Instantiate(prefab_a_Clonar,
+                gameObject.transform.position,
+                gameObject.transform.rotation
                 );
             nuevo.name = "prefab_No_" + conPrefabs.ToString(); 
         }
